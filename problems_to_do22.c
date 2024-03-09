@@ -1,24 +1,25 @@
-#include<stdio.h>
+#include <stdio.h>
+int count_p(int N, int ratings[]) {
+    int count = 0;
+    for (int i = 0; i < N; i++) {
+        if (ratings[i] >= 1000) {
+            count++;
+        }
+    }
+    return count;
+}
 int main() {
     int T;
-    printf("Enter No of test cases: ");
     scanf("%d", &T);
     for (int t = 0; t < T; t++) {
-        int n;
-        scanf("%d", &n);        
-        int count = 0;
-        for (int i = 0; i < n; i++) {
-            int num;
-            scanf("%d", &num);
-            for (int j = 0; j < num; j++) {
-                int number;
-                scanf("%d", &number);
-                if (number >= 1000) {
-                    count++;
-                }
-            }
+        int N;
+        scanf("%d", &N);
+        int ratings[N];
+        for (int i = 0; i < N; i++) {
+            scanf("%d", &ratings[i]);
         }
-        printf("%d\n", count);
+        int prob_rm = count_p(N, ratings);
+        printf("%d\n", prob_rm);
     }
     return 0;
 }
