@@ -1,23 +1,20 @@
-#include<stdio.h>
-int can_achieve_marks(int N, int X, int Y) {
-    if (Y % X == 0 && Y <= N * X)
-        return 1;
-    else
-        return 0;
+#include <stdio.h>
+char* is_valid_game(int N, int X) {
+    if (N > X) {
+        return "NO";
+    } else if (N == X || X % N == 0) {
+        return "YES";
+    } else {
+        return "NO";
+    }
 }
 int main() {
     int T;
-    printf("Enter the number of test cases: ");
     scanf("%d", &T);
     for (int i = 0; i < T; i++) {
-        int N, X, Y;5
-
-        printf("Enter N, X, and Y for test case %d: ", i+1);
-        scanf("%d%d%d", &N, &X, &Y);
-        if(can_achieve_marks(N, X, Y)){
-            printf("Yes");
-        }else printf("NO");
-
+        int N, X;
+        scanf("%d %d", &N, &X);
+        printf("%s\n", is_valid_game(N, X));
     }
     return 0;
 }
