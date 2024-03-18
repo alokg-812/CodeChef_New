@@ -4,10 +4,10 @@ int main() {
     printf("Enter the T: ");
     scanf("%d",&T);
     for (int i = 0; i < T ; i++) {
-        int r1,r2,r3,r4;
-        printf("Enter the dec by r1, r2, r3, r4 : ");
-        scanf("%d%d%d%d",&r1,&r2,&r3,&r4);
-        if (r1+r2+r3+r4 == 0) {
+        int R1,R2,R3,R4;
+        printf("Enter the dec by R1, R2, R3, R4 : ");
+        scanf("%d%d%d%d",&R1,&R2,&R3,&R4);
+        if (R1+R2+R3+R4 == 0) {
             printf("IN\n");
         }
         else printf("OUT\n");
